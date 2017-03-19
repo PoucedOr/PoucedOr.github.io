@@ -1,0 +1,546 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*---------------
+ ------Polices--
+---------------*/
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('Oswald-Regular.ttf') format('ttf');
+}
+
+/*--------------------
+----------------------
+--------------------*/
+
+body {
+  background-color: #fcfcfc;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.bullet li{
+  list-style-type: disc;
+  margin-left:15px;
+}
+
+
+h4{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+
+/* ------------------------- */
+/* --- app.component.css --- */
+/* ------------------------- */
+
+footer.page-footer {
+  margin: 0;
+}
+
+#core-content {
+  min-height: 92vh;
+}
+
+#top {
+  height: 1px;
+  position: absolute;
+}
+
+.no-margin-left
+{
+  margin-left: 0px !important;
+}
+
+.section_small {
+  width: 90%;
+}
+
+#clock_day{
+  font-weight: bold;
+  font-size: 100px;
+}
+
+/* ------------------------- */
+/* --- app.firstscreen.component.css --- */
+/* ------------------------- */
+
+#firstscreen .parallax-container {
+	min-height: 380px;
+	line-height: 0;
+	height: 100vh;
+	color: #26a69a;
+	background: rgba(47,48,54,0.30);
+	border: 1px solid #979797;
+}
+
+#firstscreen .parallax{
+  overflow: hidden;
+}
+
+#firstscreen .parallax img{
+	width: 100%;
+  height: inherit;
+}
+
+@media screen and (max-width: 500px) /* Titre sur petit écran */
+{
+  #firstscreen #title{
+	   font-size: 42px;
+   }
+
+   #essentielaccueil{
+     font-size: 1.3rem;
+   }
+}
+
+@media screen and (min-width: 500px){ /*Titre sur grand écran */
+
+  #firstscreen #title{
+	   font-size: 80px;
+   }
+}
+
+#firstscreen #index-banner{
+  padding-top: 130px;
+}
+
+#firstscreen #FAB{
+  position: absolute;
+  top: 88vh;
+  z-index: 100;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* ------------------------- */
+/* --- app.firstimage.component.css --- */
+/* -------Pour les autres pages---- */
+
+@media screen and (min-width: 700px){
+
+  .firstimage {
+    height: 85vh;
+}
+}
+
+@media screen and (max-width: 700px){
+
+  .firstimage {
+    height: 85vh;
+}
+}
+
+/* Pre-registration form */
+
+#pre_registration_form{
+  margin-top: 30px;
+}
+
+/* Registration form */
+
+#registration_form .input-field div.error{
+  position: relative;
+  top: -1rem;
+  left: 0rem;
+  font-size: 0.8rem;
+  color:#FF4081;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+/* label underline focus color */
+#registration_form .input-field input[type=text]:focus {
+  border-bottom: 1px solid #ff4081;
+  box-shadow: 0 1px 0 0 #ff4081;
+}
+/* valid color */
+#registration_form .input-field input[type=text].valid {
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+/* invalid color */
+#registration_form .input-field input[type=text].invalid {
+  border-bottom: 1px solid #ff4081;
+  box-shadow: 0 1px 0 0 #ff4081;
+}
+
+/* Add red star before label of required inputs */
+.required:before {
+  content: "* ";
+  color: red;
+}
+
+/* ------------------------- */
+/* --- app.menu.component.css --- */
+/* ------------------------- */
+
+/* NavBar */
+
+nav{
+  box-shadow: none;
+}
+
+#navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+#navbar.default {
+  box-shadow: none;
+  /*padding-top: 10px;    barre au dessus du menu*/
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#navbar.default #header-nav-buttons {
+  top: 14px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#navbar.default a.btn-connexion, #navbar.default nav ul li a  {
+  color: white;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#navbar.sticky {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#navbar.sticky #header-nav-buttons {
+  top: 14px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#navbar.sticky a.btn-connexion, #navbar.sticky nav ul li a {
+  color: black;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.menu nav #nav-desktop a{
+	padding: 0;
+	text-transform: uppercase;
+	color: white;
+}
+
+.menu nav #nav-desktop {
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+width : 100%;
+display:inline-block;
+}
+.menu nav #nav-desktop li{
+position:relative;
+text-align:center;
+}
+
+.menu #logo-container {
+  width : 17%;
+}
+
+.menu nav {
+  padding-left: 17%;
+}
+#navcolor {
+  padding-right: 300px;}
+
+#navcolor .nav-wrapper {
+  width : 100%;}
+
+#logo-container {
+  height : 100%;
+  margin : auto;
+}
+
+.menuligros {
+  width : 21%;
+}
+.menulipetit {
+  width : 16%;
+}
+
+/* Scroll btn */
+.menu .button-collapse {
+  color: #26a69a;
+}
+
+/* Logo */
+.menu .brand-logo{
+	padding-left: 25px;
+	/*padding-top: 6px; */
+}
+
+/* SignUp and LogIn Buttons */
+.menu #header-nav-buttons {
+	position: fixed;
+	right: 0px;
+	top: 14px;
+	padding-right: 23px;
+}
+
+.menu .btn-connexion{
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	text-transform: none;
+}
+
+.menu .btn-signup{
+	color: black;
+	background: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
+	text-transform: none;
+}
+
+.menu .side-nav{
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+/* ------------------------- */
+/* --- app.restscreen.component.css --- */
+/* ------------------------- */
+
+#block3parts{
+  width: 80%;
+  margin-top: 2em;
+  padding-top: 2.5em;
+}
+
+#schools {
+  height: 100vh;
+  width: 80%;
+  margin-top: 2em;
+  padding-top: 2.5em;
+}
+
+#whatis {
+  margin-top: 1em;
+  padding-top: 2.5em;
+}
+
+#whynot {
+  height: 100vh !important;
+  width: 100%;
+}
+
+#schools a.twitter-timeline{
+  text-align: center;
+
+}
+
+#schools iframe.twitter-timeline{
+  width: 90% !important;
+  height: 50vh !important;
+}
+
+/* ------------------------- */
+/* --- app.review.component.css --- */
+/* ------------------------- */
+
+.review{
+  width: 100%;
+  margin-top: 2.5em;
+	font-family: Roboto-BoldItalic;
+	font-size: 17px;
+}
+
+.name{
+  width: 100%;
+  margin-top: 2.5em;
+  font-family: Roboto-BoldItalic;
+  font-size: 17px;
+}
+
+.review .signature{
+  margin-top: 1em;
+}
+
+
+
+/* ------------------------- */
+/* --- app.signup.component.css --- */
+/* ------------------------- */
+
+#signup{
+	width: 80%;
+}
+
+#login #modal_connexion {
+  -ms-transform: scale(0.7) !important; /* IE 9 */
+  -webkit-transform: scale(0.7) !important;
+  transform: scale(0.7) !important;
+  overflow-y: visible;
+  background-color: transparent;
+  max-height: none;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+}
+
+
+/* ------------------------- */
+/* --- Partenaires --- */
+/* ------------------------- */
+
+.partenaire{
+  width: 100%;
+}
+
+.descri_partenaire{
+  padding-top: 4%;
+  text-align: left; /*Contrer l'héritage de "center" */
+
+}
+
+.partenaire.center{
+  margin-top: 3em;
+}
+
+.logo_partenaire{
+  float: left;
+  width: 20%;
+  height: 20%:
+}
+
+/* ------------------------- */
+/* --- Liens --- */
+/* ------------------------- */
+
+.logo_lien{
+  float: left;
+  width: 10%;
+  height: 10%;
+}
+
+/* ------------------------- */
+/* --- Footer --- */
+/* ------------------------- */
+
+#copyright{
+  padding: 0px;
+}
+
+.droits{
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.1;
+  padding: 15px;
+  width: 90%;
+  margin-bottom: 5px;
+  max-width: initial !important;
+}
+
+#licence{
+  text-align: center;
+}
+
+#licence a{
+    color:rgba(255, 255, 255, 0.9) !important;
+}
+
+@media screen and (max-width: 900px){
+
+  .droits{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.1;
+    padding: 15px;
+    width: 100%;
+  }
+
+  #licence{
+    text-align: left;
+  }
+}
+
+
+h5 footer{
+  color: #FFFFFF !important;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* ------------------------- */
+/* --- app.whatis.component.css --- */
+/* ------------------------- */
+
+#whatis .parallax-container {
+  height: 700px;
+  background: rgba(47,48,54,0.30);
+  padding-top: 30px;
+}
+
+#whatis .parallax{
+  overflow: hidden;
+}
+
+#whatis .parallax img{
+  width: 100%;
+  height: inherit;
+}
+
+#whatis .collapsible-header{
+  color: #4b4e53;
+}
+
+#whatis .collapsible-body{
+  color: #4b4e53;
+  background-color: #fff
+}
+
+#whatis p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#whatis .calendar-container li{
+  font: 500 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/*Classement*/
+.liensclassementtop, .hrclassement {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.liensclassementbot {
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+}

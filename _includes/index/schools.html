@@ -1,0 +1,86 @@
+<div class="col s12 m10 offset-m1">
+
+	<h4 class="center">Les écoles participantes et les sponsors</h4>
+
+	<div class="row valign-wrapper">
+	{% for schoolName in site.data.ecoles.name %}
+
+		<!-- Get the number of the row to put next school image (From 1 to 6) -->
+		{% assign loopindex = forloop.index - 1 | modulo : 6 %}
+
+		<!-- {{ forloop.index }}//
+		{{ loopindex }} -->
+		<!-- If we begin a new row but not the first one but the last one // It's the LAST row ! -->
+		{% if loopindex == 1 and forloop.index != 0 and forloop.rindex < 6 %}
+
+			<!-- How many image left there are -->
+			{% case forloop.rindex %}
+				{% when 1 %}
+					<div class="col s12 m2 offset-m5">
+						<img src="/{{ site.data.ecoles.schoolfolder }}/{{ schoolName }}" class="responsive-img valign">
+					</div>
+				{% when 2 %}
+					<div class="col s12 m2 offset-m4">
+						<img src="/{{ site.data.ecoles.schoolfolder }}/{{ schoolName }}" class="responsive-img valign">
+					</div>
+				{% when 3 %}
+					<div class="col s12 m2 offset-m3">
+						<img src="/{{ site.data.ecoles.schoolfolder }}/{{ schoolName }}" class="responsive-img valign">
+					</div>
+				{% when 4 %}
+					<div class="col s12 m2 offset-m2">
+						<img src="/{{ site.data.ecoles.schoolfolder }}/{{ schoolName }}" class="responsive-img valign">
+					</div>
+				{% when 5 %}
+					<div class="col s12 m2 offset-m1">
+						<img src="/{{ site.data.ecoles.schoolfolder }}/{{ schoolName }}" class="responsive-img valign">
+					</div>
+			{% endcase %}
+
+		<!-- Else it's the last row but not the first image-->
+		{% elsif loopindex != 1 and forloop.index != 0 and forloop.rindex < 6 %}
+			<div class="col s12 m2 no-margin-left">
+				{% img ecoles/{{schoolName}} class:"responsive-img valign" magick:resize:150x150 %}
+			</div>
+
+		<!-- Else it's not the last row -->
+		{% else %}
+			<div class="col s12 m2">
+				{% img ecoles/{{schoolName}} class:"responsive-img valign" magick:resize:150x150 %}
+
+			</div>
+		{% endif %}
+
+		<!-- If we begin a new row but not the first one -->
+		{% if loopindex == 0 and forloop.index != 1 %}
+			</div>
+			<div class="row valign-wrapper">
+		{% endif %}
+
+	{% endfor %}
+
+	</div>
+
+</div>
+
+<!-- Réseaux en commentaires !
+Si on remet réseaux, mettre classe ligne 1 en m9.
+
+
+<div class="col s12 m3">
+	<h4 class="center">Réseaux</h4>
+	<div align="center">
+		<a class="twitter-timeline" href="https://twitter.com/search?q=%23poucedor" data-widget-id="384379510562365440">Tweets concernant "#poucedor"</a>
+	</div>
+	<br/>
+	<div align="center">
+		<div id="fb-root"></div>
+		<div class="fb-page" data-href="https://www.facebook.com/poucedor" data-small-header="false" data-width="210px" data-height="100px" data-hide-cover="false" data-show-facepile="false" data-show-posts="false">
+			<div class="fb-xfbml-parse-ignore">
+				<blockquote cite="https://www.facebook.com/poucedor"><a href="https://www.facebook.com/poucedor">Pouce d&#039;Or</a></blockquote>
+			</div>
+		</div>
+	</div>
+</div>
+
+-->
