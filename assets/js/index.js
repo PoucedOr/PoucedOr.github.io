@@ -26,15 +26,22 @@ $(document).ready(function(){
 /*	STICKY HEADER
 /*-----------------------------------------------------------------------------------*/
 
+function majMenu(){
+	var hauteurImage = $(document.getElementsByClassName('parallax-container').item(0)).height()-(4*$( window ).width()/100)-1;
+	if ($(window).scrollTop() > hauteurImage && menu.hasClass('default')) {
+        menu.removeClass('default').addClass('sticky').fadeIn('fast');
+    } else if ($(window).scrollTop() <=  hauteurImage && menu.hasClass('sticky'))  {
+        menu.removeClass('sticky').addClass('default').fadeIn(0);
+
+    }
+}
+
+
+$(document).ready(majMenu);
+
 var menu = $('#navbar');
 
-$(window).bind('scroll', function () {
-	if ($(window).scrollTop() > 300 && menu.hasClass('default')) {
-        menu.removeClass('default').addClass('sticky').fadeIn('fast');
-    } else if ($(window).scrollTop() <=  300 && menu.hasClass('sticky'))  {
-        menu.removeClass('sticky').addClass('default').fadeIn(0);
-    }
-});
+$(window).bind('scroll', majMenu);
 
 /*-----------------------------------------------------------------------------------*/
 /*	COPY FRONT FORM DATA TO REAL FORM
@@ -290,5 +297,24 @@ $(document).ready(function(){
 
 $(document).ready(function () {
     // Plugin initialization
-    $('#whatis-right3 .slider').slider({indicators:false,interval:5000});
+    $('#whatis-right3 .slider').slider({interval:4000, height:350});
 })
+
+/*-----------------------------------------------------------------------------------*/
+/*	school-mobile slider
+/*-----------------------------------------------------------------------------------*/
+
+$(document).ready(function () {
+    // Plugin initialization
+    $('#school-mobile .slider').slider({indicators:false, height:280, interval:1000});
+})
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	numbers-mobile scrollFire
+/*-----------------------------------------------------------------------------------*/
+
+ 	var options = [ {selector: '#numbers-mobile-list1', offset: 200, callback: function(el) { Materialize.showStaggeredList($(el)); } },
+									{selector: '#numbers-mobile-list2', offset: 200, callback: function(el) { Materialize.showStaggeredList($(el)); } },
+									{selector: '#numbers-mobile-list3', offset: 200, callback: function(el) { Materialize.showStaggeredList($(el)); } }];
+ 	Materialize.scrollFire(options);

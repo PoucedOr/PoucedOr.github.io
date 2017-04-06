@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'oswald';
-    src: url(oswald/Oswald-Regular.ttf) format('ttf');
+    src: url(fonts/oswald/Oswald-Regular.ttf) format('ttf');
 }
 
 /*--------------------
@@ -102,7 +102,18 @@ h4{
   overflow: hidden;
 }
 
+/*Gestion des margins page d'accueil*/
 
+/*"Inscris toi à l'édition 2017" */
+#signup h3{
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+}
+
+/*"Etablissements au départ"+ "Partenaires"*/
+#schools h4{
+  margin-bottom: 4rem;
+}
 
 /* ------------------------- */
 /* --- app.component.css --- */
@@ -133,6 +144,10 @@ footer.page-footer {
 #clock_day{
   font-weight: bold;
   font-size: 100px;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #ff6f00;
 }
 
 /* ------------------------- */
@@ -244,20 +259,50 @@ footer.page-footer {
 /* ------------------------- */
 
 /* NavBar */
-
+/*.menu{
+  height:4vw;
+}
 nav{
-  box-shadow: none;
+  height:4vw;
+  line-height:4vw;
+  position:fixed;
 }
 
+nav div{
+
+  position:static;
+}
+
+nav div ul{
+  width:80vw;
+  position:static;
+}
+
+nav div ul li{
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  width:20%;
+  position:static;
+  display:inline;
+    margin:auto;
+}
+nav div ul li a{
+  position: static;
+  text-align: center;
+
+}
+*/
 #navbar, #navbar_sans_fond{
   position: fixed;
   width: 100%;
   z-index: 1000;
+  height:4vw;
+  line-height: 4vw;
 }
 
 #navbar.default, #navbar_sans_fond.default{
   box-shadow: none;
-  /*padding-top: 10px;    barre au dessus du menu*/
+  /*padding-top: 10px;    barre au dessus du menu */
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
@@ -320,7 +365,7 @@ nav{
 }
 
 .menu nav #nav-desktop {
-padding:0;
+padding:0 5vw;
 margin:0;
 list-style:none;
 text-align:center;
@@ -333,14 +378,12 @@ text-align:center;
 }
 
 .menu #logo-container {
-  width : 17%;
+  width : 16vw;
 }
 
 .menu nav {
-  padding-left: 17%;
+  padding-left: 16vw;
 }
-#navcolor {
-  padding-right: 300px;}
 
 #navcolor .nav-wrapper {
   width : 100%;}
@@ -350,25 +393,17 @@ text-align:center;
   margin : auto;
 }
 
-.menuligros {
-  width : 21%;
-}
-.menulipetit {
-  width : 16%;
+#nav-desktop li{
+  width:20%;
 }
 
 /* Scroll btn */
 .menu .button-collapse {
   color: #ffd54f;
+  height:24px;
 }
 
-/* Logo */
-.menu .brand-logo{
-	padding-left: 25px;
-	/*padding-top: 6px; */
-}
-
-/* SignUp and LogIn Buttons */
+/* SignUp and LogIn Buttons*/
 .menu #header-nav-buttons {
 	position: fixed;
 	right: 0px;
@@ -406,7 +441,6 @@ text-align:center;
 }
 
 #schools {
-  height: 100vh;
   width: 80%;
   margin-top: 2em;
   padding-top: 2.5em;
@@ -433,6 +467,19 @@ text-align:center;
 }
 
 /* ------------------------- */
+/* --- app.school-mobile.component.css --- */
+/* ------------------------- */
+
+#school-mobile .slider .slides li img {
+    background-size:100% auto;
+    background-repeat: no-repeat;
+}
+
+#school-mobile .slider .slides {
+    background-color: #00000000;
+}
+
+/* ------------------------- */
 /* --- app.review.component.css --- */
 /* ------------------------- */
 
@@ -454,7 +501,11 @@ text-align:center;
   margin-top: 1em;
 }
 
-
+@media screen and (max-width: 600px){
+  #a0{
+    margin-top: 1.5rem;
+  }
+}
 
 /* ------------------------- */
 /* --- app.signup.component.css --- */
@@ -492,10 +543,21 @@ text-align:center;
   margin: 1.2rem 0 0.912rem 0;
 }
 
+#licences .parallax-container{
+  position: relative;
+  overflow: hidden;
+  height: 75px;
+}
+
 
 /* ------------------------- */
 /* --- Partenaires --- */
 /* ------------------------- */
+
+.carte_partenaire{ /*personnalisation de la carte partenaire materialize*/
+  height: 250px !important;
+  margin-bottom: 2.5rem;
+}
 
 @media screen and (min-width: 331px) and (max-width: 600px){
 
@@ -617,7 +679,10 @@ h5 footer{
 }
 
 
-/*Classement*/
+/* ------------------------- */
+/* --- Classements --------- */
+/* ------------------------- */
+
 .liensclassementtop, .hrclassement {
   padding-top: 2vh;
   padding-bottom: 2vh;
@@ -631,4 +696,13 @@ h5 footer{
 #pageclassement {
   padding-left: 1vw;
   padding-right: 1vw;
+}
+
+.classement ul{
+  margin-top:0;
+  height:inherit;
+}
+
+.classement ul li{
+  height:inherit;
 }
