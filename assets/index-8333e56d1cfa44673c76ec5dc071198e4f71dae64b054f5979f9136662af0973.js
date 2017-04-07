@@ -2,6 +2,7 @@
 /*	Initialize Modals, Select fields, Parallax effect, Side navs
 /*-----------------------------------------------------------------------------------*/
 
+
 $(document).ready(function(){
 	$('#modal1').modal();
 	$('#modal_connexion').modal();
@@ -322,14 +323,4 @@ $(document).ready(function () {
 /*-----------------------------------------------------------------------------------*/
 /*	classement dropdown version mobile
 /*-----------------------------------------------------------------------------------*/
-$('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrainWidth: false, // Does not change width of dropdown to that of the activator
-      hover: false, // Desactivate on hover
-      gutter: 0, // Spacing from edge
-      belowOrigin: false, // Displays dropdown below the button
-      alignment: 'left', // Displays dropdown with edge aligned to the left of button
-      stopPropagation: false // Stops event propagation
-    }
-  );
+;
