@@ -4,6 +4,7 @@
  ------Polices--
 ---------------*/
 
+
 @font-face {
     font-family: 'oswald';
     src: url(fonts/oswald/Oswald-Regular.ttf) format('ttf');
@@ -604,7 +605,7 @@ text-align:center;
 {
 
   .container_lien{
-    padding: 12px !important;
+    padding: 15px !important;
   }
 
   .container_lien_droite{

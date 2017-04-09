@@ -4,6 +4,7 @@
  ------Polices--
 ---------------*/
 
+
 @font-face {
     font-family: 'oswald';
     src: url(fonts/oswald/Oswald-Regular.ttf) format('ttf');
@@ -620,7 +621,7 @@ text-align:center;
 
 @media only screen and (min-width: 601px) {
   #liensassociation {
-    width: 80%; }
+    width: 75%; }
 }
 .card-action{
   padding:1vw !important;
