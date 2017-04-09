@@ -31,8 +31,8 @@ $(".clock").TimeCircles({
 var date1 = new Date();
 var datadate = $("#clock_day").attr( 'data-date' );
 var date2 = Date.parse(datadate);
-var diff = date2 - date1;
-var days = Math.floor(diff / 1000 / 60 / 60 / 24);
+var diff = new Date(date2 - date1);
+var days = Math.floor((date2-date1) / 1000 / 60 / 60 / 24);
 
 // var numAnim = new CountUp("clock_day", 0, endVal, duration/2);
 // numAnim.start(function() {
