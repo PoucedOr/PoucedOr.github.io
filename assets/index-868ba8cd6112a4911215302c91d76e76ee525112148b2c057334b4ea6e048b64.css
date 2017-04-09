@@ -4,6 +4,7 @@
  ------Polices--
 ---------------*/
 
+
 @font-face {
     font-family: 'oswald';
     src: url(fonts/oswald/Oswald-Regular.ttf) format('ttf');
@@ -787,8 +788,7 @@ p.dates{
 /* ------ defis.html ------- */
 /* ------------------------- */
 
-@media screen and (max-width: 350px){
-    #liste_defis_tab{
-    font-size: 4vw;
-  }
+#liste_defis_tab th{
+  font-size: 10vm;
+  word-wrap: break-word;
 }

@@ -4,6 +4,7 @@
  ------Polices--
 ---------------*/
 
+
 @font-face {
     font-family: 'oswald';
     src: url(fonts/oswald/Oswald-Regular.ttf) format('ttf');
@@ -781,14 +782,4 @@ p.dates{
 }
 #numbers-monde{
   background: url("img/numbers/monde.png") no-repeat center;
-}
-
-/* ------------------------- */
-/* ------ defis.html ------- */
-/* ------------------------- */
-
-@media screen and (max-width: 350px){
-    #liste_defis_tab{
-    font-size: 4vw;
-  }
 }

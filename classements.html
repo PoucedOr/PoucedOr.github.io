@@ -40,7 +40,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 	<link type="text/css" rel="stylesheet" href="/assets/login-30009898b2703739c50aa9790b2297cd372517fa2343f7943a755eb0c1d0e3c6.css">
 
 	<!-- global stylesheet -->
-	<link type="text/css" rel="stylesheet" href="/assets/index-87a8110305393c917e7c24133c1893628180e1d1b5239817f1ac859476b204bf.css">
+	<link type="text/css" rel="stylesheet" href="/assets/index-e8a5aa020db8de3f1ccd6d136fd7ae4d0ffe02d41a190b2a86da17acce3f265e.css">
 
 	<!-- calendar -->
 	<link type="text/css" rel="stylesheet" href="/assets/calendar-a41d69c829024b661bceca74a1bb1a25f40c433f8f775e79ae2fdff14c7ebb73.css">
@@ -101,20 +101,6 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 </div>
 
 	<div id="core-content">
-	<script>
-		function Onglets(id) {
-			CloseMultiDiv('classement');
-			document.getElementById(id).style.display='inline';
-			document.getElementById('button_mobile_dropdown').text='Classement ' + id;
-		}
-			function CloseMultiDiv(Nom){
-	        for (i=0; i<document.getElementsByTagName('div').length; i++) {
-	            if (document.getElementsByTagName('div').item(i).className == Nom){
-	                document.getElementsByTagName('div').item(i).style.display='none';
-	            }
-	        }
-	    }
-		</script>
 	<div id="login"><div id="modal_connexion" class="modal materialContainer">
 
 
@@ -177,182 +163,70 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
    </div>
 
 </div></div>
-	<div id="classements"><div class="parallax-container firstimage">
+	<div id="classements"><script>
+	function Onglets(id) {
+		CloseMultiDiv('classement');
+		document.getElementById(id).style.display='inline';
+		document.getElementById('button_mobile_dropdown').text='Classement ' + id;
+	}
+		function CloseMultiDiv(Nom){
+        for (i=0; i<document.getElementsByTagName('div').length; i++) {
+            if (document.getElementsByTagName('div').item(i).className == Nom){
+                document.getElementsByTagName('div').item(i).style.display='none';
+            }
+        }
+    }
+	</script>
+
+
+<div class="parallax-container firstimage">
 	<div class="parallax"><img src="/assets/img/classements.jpg" alt="Unsplashed background img 2"></div>
 </div>
-</div>
-	<div class="section row" id="signup" display="none"><div id="modal1" class="modal modal-fixed-footer">
-	<div class="modal-content">
-		<h4>Inscription au site du Pouce d'Or</h4>
-
-		<blockquote style="margin-left:70px;">
-			Remplis bien tous les champs pour pouvoir t'inscire.
-			<p>
-				Cela ne t'engage à rien. L'inscription à la course se fait dans un second temps (lors de la formation du binôme).
-			</p>
-			Les mails et numéros de téléphone n'apparaîtront nulle part sur ce site. 
-		</blockquote>
-		
-		<form action="" method="POST" class="registration_form" id="registration_form">
-
-			<div class="row">
-				<div class="col s12 m12 input-field">
-					<input 
-						placeholder="prenom.nom@ecole.fr" 
-						id="email" 
-						name="email" 
-						type="text" 
-						class="validate"
-						data-error=".errorTxt1"
-						required>
-					<label for="email" class="required">Adresse e-mail</label>
-					<div class="errorTxt1"></div>
-				</div>
-
-				<div class="col s12 m6 input-field">
-					<input 
-						placeholder="*********" 
-						id="plainPasswordFirst" 
-						name="plainPasswordFirst" 
-						type="password" 
-						class="validate" 
-						required>
-					<label for="plainPasswordFirst" class="required">Mot de passe</label>
-					<div class="errorTxt2"></div>
-				</div>
-
-				<div class="col s12 m6 input-field">
-					<input 
-						placeholder="*********" 
-						id="plainPasswordSecond"
-						name="plainPasswordSecond"
-						type="password" 
-						class="validate" 
-						required>
-					<label for="plainPasswordSecond" class="required">Vérification</label>
-					<div class="errorTxt3"></div>
-				</div>
-
-				<div class="col s12 m4 input-field ">
-					<input 
-						id="first_name"
-						name="first_name"
-						type="text" 
-						class="validate" 
-						required>
-					<label for="first_name" class="required">Prénom</label>
-					<div class="errorTxt4"></div>
-				</div>
-
-				<div class="col s12 m4 input-field ">
-					<input 
-						id="last_name"
-						name="last_name" 
-						type="text" 
-						class="validate" 
-						required>
-					<label for="last_name" class="required">Nom</label>
-					<div class="errorTxt5"></div>
-				</div>
-
-				<div class="col s12 m4 input-field">
-					<select 
-						id="sex"
-						name="sex"
-						required>
-						<option value="" disabled selected>Choisissez votre sexe</option>
-						<option value="Homme">Homme</option>
-						<option value="Femme">Femme</option>
-				    </select>
-				</div>
-
-				<div class="input-field col s12 m12">
-					<input 
-						id="telephone" 
-						name="telephone"
-						type="text" 
-						class="validate" 
-						required>
-					<label for="telephone" class="required">Numéro de téléphone</label>
-				</div>
-
-				<div class="input-field col s12 m12">
-					<select 
-						id="university"
-						name="university"
-						required>
-						<option value="" disabled selected>Choisissez votre école ou université</option>
-						<option value="1"></option>
-				    </select>
-				</div>
-
-			</div>
-
-			<div class="row">
-				<input 
-					type="checkbox"
-					id="CGU"
-					name="CGU"
-					required>
-				<label for="CGU">J'ai lu et j'accepte les conditions générales du site et le règlement du concours, disponibles <a href="">ici</a>. Je déclare l'exactitude des informations rentrées ci-dessus.</label>
-			</div>
-		</form>
+<h4 class="center">Classements</h4>
+<div class="row section" id="pageclassement">
+	<div class="col m2 striped z-depth-2 hide-on-small-only" id="liensclassement">
+		<ul>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('2016');return false;">Classement 2016</a></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis');return false;">Classement défis</a></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('Top25');return false;">Top 25</a></li>
+			<li class="hrclassement"><hr/></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2015');return false;">Classement 2015</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2014');return false;">Classement 2014</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2013');return false;">Classement 2013</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2012');return false;">Classement 2012</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2011');return false;">Classement 2011</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2010');return false;">Classement 2010</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2009');return false;">Classement 2009</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2008');return false;">Classement 2008</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2006');return false;">Classement 2006</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2005');return false;">Classement 2005</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2004');return false;">Classement 2004</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2003');return false;">Classement 2003</a></li>
+		</ul>
 	</div>
-	<div class="modal-footer">
-		<button 
-			class="modal-action modal-close btn waves-effect waves-light"
-			type="submit"
-			id="submit"
-			value=""/>Enregistrer
-			<i class="material-icons right">send</i>
-		</button>
+	<div class="col s12 hide-on-med-and-up row">
+		<a class='dropdown-button btn' href='#' data-activates='dropdown1' id="button_mobile_dropdown">Classement 2016</a>
+		<ul id='dropdown1' class='dropdown-content'>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('2016');return false;">2016</a></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis');return false;">Défis</a></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('Top25');return false;">Top 25</a></li>
+			<li class="divider"></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2015');return false;">2015</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2014');return false;">2014</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2013');return false;">2013</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2012');return false;">2012</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2011');return false;">2011</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2010');return false;">2010</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2009');return false;">2009</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2008');return false;">2008</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2006');return false;">2006</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2005');return false;">2005</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2004');return false;">2004</a></li>
+			<li class="liensclassementbot"><a href="#" onclick="Onglets('2003');return false;">2003</a></li>
+		</ul>
 	</div>
-</div></div>
-	<h4 class="center">Classements</h4>
-	<div class="row section" id="pageclassement">
-		<div class="col m2 striped z-depth-2 hide-on-small-only" id="liensclassement">
-			<ul>
-				<li class="liensclassementtop"><a href="#" onclick="Onglets('2016');return false;">Classement 2016</a></li>
-				<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis');return false;">Classement défis</a></li>
-				<li class="liensclassementtop"><a href="#" onclick="Onglets('Top25');return false;">Top 25</a></li>
-				<li class="hrclassement"><hr/></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2015');return false;">Classement 2015</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2014');return false;">Classement 2014</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2013');return false;">Classement 2013</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2012');return false;">Classement 2012</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2011');return false;">Classement 2011</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2010');return false;">Classement 2010</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2009');return false;">Classement 2009</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2008');return false;">Classement 2008</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2006');return false;">Classement 2006</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2005');return false;">Classement 2005</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2004');return false;">Classement 2004</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2003');return false;">Classement 2003</a></li>
-			</ul>
-		</div>
-		<div class="col s12 hide-on-med-and-up row">
-			<a class='dropdown-button btn' href='#' data-activates='dropdown1' id="button_mobile_dropdown">Classement 2016</a>
-			<ul id='dropdown1' class='dropdown-content'>
-				<li class="liensclassementtop"><a href="#" onclick="Onglets('2016');return false;">2016</a></li>
-				<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis');return false;">Défis</a></li>
-				<li class="liensclassementtop"><a href="#" onclick="Onglets('Top25');return false;">Top 25</a></li>
-				<li class="divider"></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2015');return false;">2015</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2014');return false;">2014</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2013');return false;">2013</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2012');return false;">2012</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2011');return false;">2011</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2010');return false;">2010</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2009');return false;">2009</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2008');return false;">2008</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2006');return false;">2006</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2005');return false;">2005</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2004');return false;">2004</a></li>
-				<li class="liensclassementbot"><a href="#" onclick="Onglets('2003');return false;">2003</a></li>
-			</ul>
-		</div>
-		<div class="col s12 m10">
-			<div class="classement" id="2016"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+	<div class="col s12 m10">
+		<div class="classement" id="2016"><ul class="collapsible z-depth-2" data-collapsible=accordion>
     <li>
       <div class='collapsible-header'>
         1 - Les Pouples d'Or
@@ -3323,7 +3197,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
     </li>
 </ul>
 </div>
-			<div class="classement" id="Defis" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible="accordion">
+		<div class="classement" id="Defis" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible="accordion">
   <li>
     <div class='collapsible-header'>
       1 - Happy Feet
@@ -3799,7 +3673,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="Top25" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible="accordion">
+		<div class="classement" id="Top25" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible="accordion">
   <li>     <div class='collapsible-header'>       Pouce d'Or - ?? (2010)       <div class='secondary-content hide-on-small-only'>         1576 km - Centrale Nantes       </div>     </div>     <div class='collapsible-body'>       Arrivée à : <b>Copenhague Danemark</b><br />       Soit <b>1576 km km</b> depuis <b>Nantes</b><br />       L'équipe a eu <b>0h</b> de retard.<br />       L'équipe totalise donc <b>1576</b> points.     </div>   </li>
   <li>     <div class='collapsible-header'>       Pouce d'Argent - Les Pouples d'Or (2016)       <div class='secondary-content hide-on-small-only'>         1548 km - Ensisa Mulhouse       </div>     </div>     <div class='collapsible-body'>       Arrivée à : <b>Augustown, Pologne</b><br />       Soit <b>1581 km</b> depuis <b>Mulhouse</b><br />       L'équipe a eu <b>0,33h</b> de retard.<br />       L'équipe totalise donc <b>1548</b> points.     </div>   </li>
   <li>     <div class='collapsible-header'>       Pouce de Bronze - ?? (2008)       <div class='secondary-content hide-on-small-only'>         1410 km - Centrale Nantes       </div>     </div>     <div class='collapsible-body'>       Arrivée à : <b>Linz Autriche</b><br />       Soit <b>1410 km km</b> depuis <b>Nantes</b><br />       L'équipe a eu <b>?h</b> de retard.<br />       L'équipe totalise donc <b>1410</b> points.     </div>   </li>
@@ -3827,7 +3701,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   <li>     <div class='collapsible-header'>       25 - ?? (2003)       <div class='secondary-content hide-on-small-only'>         1196 km - Centrale Nantes       </div>     </div>     <div class='collapsible-body'>       Arrivée à : <b>Corogne Espagne</b><br />       Soit <b>1196 km km</b> depuis <b>Nantes</b><br />       L'équipe a eu <b>0h</b> de retard.<br />       L'équipe totalise donc <b>1196</b> points.     </div>   </li>
 </ul>
 </div>
-			<div class="classement" id="2015" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2015" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
 <li>
 	<div class="collapsible-header">
 							1
@@ -9981,7 +9855,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 </li>
 </ul>
 </div>
-			<div class="classement" id="2014" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2014" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       1 - Les Claudettes
@@ -10848,7 +10722,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2013" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2013" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       1 - Les tocards
@@ -11955,7 +11829,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2012" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2012" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       1 - Anonymes
@@ -13182,7 +13056,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2011" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2011" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       1 - Les Pouces-Mouss'
@@ -13374,7 +13248,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
     <div class='collapsible-body'>
       Destination : <b>Figueres</b>.<br>
       Soit <b>814</b> km.<br>
-      Lise & LoÔc totalisent donc <b>814</b> points.
+      Lise & Loïc totalisent donc <b>814</b> points.
   </li>
   <li>
     <div class='collapsible-header'>
@@ -13470,7 +13344,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
     <div class='collapsible-body'>
       Destination : <b>Bruxelles</b>.<br>
       Soit <b>681</b> km.<br>
-      Paloma & BenoÓt totalisent donc <b>681</b> points.
+      Paloma & Benoît totalisent donc <b>681</b> points.
   </li>
   <li>
     <div class='collapsible-header'>
@@ -13918,7 +13792,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2010" style="display:none;">
+		<div class="classement" id="2010" style="display:none;">
 <ul class="collapsible z-depth-2" data-collapsible=accordion>  <li>
     <div class='collapsible-header'>
       1 - Kristell & Felix
@@ -13976,14 +13850,14 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
   <li>
     <div class='collapsible-header'>
-      6 - Alain & LoÔc
+      6 - Alain & Loïc
       <div class='secondary-content hide-on-small-only'>
         1041 points - Singen
       </div>
     </div>
     <div class='collapsible-body'>
       Destination : <b>Singen</b>.<br>
-      Alain & LoÔc totalisent donc <b>1041</b> points.
+      Alain & Loïc totalisent donc <b>1041</b> points.
   </li>
   <li>
     <div class='collapsible-header'>
@@ -14053,14 +13927,14 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
   <li>
     <div class='collapsible-header'>
-      11 - Marine & BenoÓt
+      11 - Marine & Benoît
       <div class='secondary-content hide-on-small-only'>
         833 points - Rotterdam
       </div>
     </div>
     <div class='collapsible-body'>
       Destination : <b>Rotterdam</b>.<br>
-      Marine & BenoÓt totalisent donc <b>833</b> points.
+      Marine & Benoît totalisent donc <b>833</b> points.
   </li>
   <li>
     <div class='collapsible-header'>
@@ -14515,7 +14389,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2009" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2009" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       1 - Tobias & Anaëlle
@@ -15024,7 +14898,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2008" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2008" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       Pouce d'Or - Gaëlle & Olivier
@@ -15357,7 +15231,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2006" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2006" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       Pouce d'Or - Thomas & Benoît
@@ -15459,7 +15333,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2005" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2005" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       Pouce d'Or - Simon & Marie
@@ -15517,7 +15391,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2004" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2004" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       Pouce d'Or - Pierre-Yves & Henri
@@ -15630,7 +15504,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-			<div class="classement" id="2003" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+		<div class="classement" id="2003" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
   <li>
     <div class='collapsible-header'>
       Pouce d'Or - Isaure & Mathieu
@@ -15853,8 +15727,136 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   </li>
 </ul>
 </div>
-		</div>
 	</div>
+</div>
+</div>
+	<div class="section row" id="signup" display="none"><div id="modal1" class="modal modal-fixed-footer">
+	<div class="modal-content">
+		<h4>Inscription au site du Pouce d'Or</h4>
+
+		<blockquote style="margin-left:70px;">
+			Remplis bien tous les champs pour pouvoir t'inscire.
+			<p>
+				Cela ne t'engage à rien. L'inscription à la course se fait dans un second temps (lors de la formation du binôme).
+			</p>
+			Les mails et numéros de téléphone n'apparaîtront nulle part sur ce site. 
+		</blockquote>
+		
+		<form action="" method="POST" class="registration_form" id="registration_form">
+
+			<div class="row">
+				<div class="col s12 m12 input-field">
+					<input 
+						placeholder="prenom.nom@ecole.fr" 
+						id="email" 
+						name="email" 
+						type="text" 
+						class="validate"
+						data-error=".errorTxt1"
+						required>
+					<label for="email" class="required">Adresse e-mail</label>
+					<div class="errorTxt1"></div>
+				</div>
+
+				<div class="col s12 m6 input-field">
+					<input 
+						placeholder="*********" 
+						id="plainPasswordFirst" 
+						name="plainPasswordFirst" 
+						type="password" 
+						class="validate" 
+						required>
+					<label for="plainPasswordFirst" class="required">Mot de passe</label>
+					<div class="errorTxt2"></div>
+				</div>
+
+				<div class="col s12 m6 input-field">
+					<input 
+						placeholder="*********" 
+						id="plainPasswordSecond"
+						name="plainPasswordSecond"
+						type="password" 
+						class="validate" 
+						required>
+					<label for="plainPasswordSecond" class="required">Vérification</label>
+					<div class="errorTxt3"></div>
+				</div>
+
+				<div class="col s12 m4 input-field ">
+					<input 
+						id="first_name"
+						name="first_name"
+						type="text" 
+						class="validate" 
+						required>
+					<label for="first_name" class="required">Prénom</label>
+					<div class="errorTxt4"></div>
+				</div>
+
+				<div class="col s12 m4 input-field ">
+					<input 
+						id="last_name"
+						name="last_name" 
+						type="text" 
+						class="validate" 
+						required>
+					<label for="last_name" class="required">Nom</label>
+					<div class="errorTxt5"></div>
+				</div>
+
+				<div class="col s12 m4 input-field">
+					<select 
+						id="sex"
+						name="sex"
+						required>
+						<option value="" disabled selected>Choisissez votre sexe</option>
+						<option value="Homme">Homme</option>
+						<option value="Femme">Femme</option>
+				    </select>
+				</div>
+
+				<div class="input-field col s12 m12">
+					<input 
+						id="telephone" 
+						name="telephone"
+						type="text" 
+						class="validate" 
+						required>
+					<label for="telephone" class="required">Numéro de téléphone</label>
+				</div>
+
+				<div class="input-field col s12 m12">
+					<select 
+						id="university"
+						name="university"
+						required>
+						<option value="" disabled selected>Choisissez votre école ou université</option>
+						<option value="1"></option>
+				    </select>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<input 
+					type="checkbox"
+					id="CGU"
+					name="CGU"
+					required>
+				<label for="CGU">J'ai lu et j'accepte les conditions générales du site et le règlement du concours, disponibles <a href="">ici</a>. Je déclare l'exactitude des informations rentrées ci-dessus.</label>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button 
+			class="modal-action modal-close btn waves-effect waves-light"
+			type="submit"
+			id="submit"
+			value=""/>Enregistrer
+			<i class="material-icons right">send</i>
+		</button>
+	</div>
+</div></div>
 </div>
 
 

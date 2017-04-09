@@ -4,6 +4,7 @@
  ------Polices--
 ---------------*/
 
+
 @font-face {
     font-family: 'oswald';
     src: url(fonts/oswald/Oswald-Regular.ttf) format('ttf');
@@ -465,7 +466,7 @@ text-align:center;
     background-color: #00000000;
 }
 
-/*@media screen and (min-width: 500px){
+@media screen and (min-width: 500px){
 
   #inscrire_etablissement{
     float: right;
@@ -497,7 +498,7 @@ text-align:center;
     font-size: 16px;
     color: #ffb300 !important;
   }
-}*/
+}
 
 /* ------------------------- */
 /* --- app.review.component.css --- */
@@ -619,7 +620,7 @@ text-align:center;
 }
 
 @media only screen and (min-width: 601px) {
-  #liensassociation {
+  .container {
     width: 95%; }
 }
 .card-action{
@@ -781,14 +782,4 @@ p.dates{
 }
 #numbers-monde{
   background: url("img/numbers/monde.png") no-repeat center;
-}
-
-/* ------------------------- */
-/* ------ defis.html ------- */
-/* ------------------------- */
-
-@media screen and (max-width: 350px){
-    #liste_defis_tab{
-    font-size: 4vw;
-  }
 }
