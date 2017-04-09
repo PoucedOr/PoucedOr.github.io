@@ -21,12 +21,21 @@ p {
   line-height: 1.6;
 }
 
+strong{
+  font-weight: 400;
+}
+
+.liste_elt{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
 .bullet li{
   list-style-type: disc;
   margin-left:15px;
 }
 
-/*--Adaptation de flow-text materialize parce que c'est trop gros et moche---*/
+/*--Adaptation de flow-text materialize parce que c'est trop gros et moche (signé Manu le Rageux)---*/
 
 .flow-text-adapt {
   font-weight: 300; }
@@ -160,7 +169,6 @@ footer.page-footer {
 	height: 100vh;
 	color: #26a69a;
 	background: rgba(47,48,54,0.30);
-	border: 1px solid #979797;
 }
 
 #firstscreen .parallax{
@@ -259,39 +267,6 @@ footer.page-footer {
 /* ------------------------- */
 
 /* NavBar */
-/*.menu{
-  height:4vw;
-}
-nav{
-  height:4vw;
-  line-height:4vw;
-  position:fixed;
-}
-
-nav div{
-
-  position:static;
-}
-
-nav div ul{
-  width:80vw;
-  position:static;
-}
-
-nav div ul li{
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  width:20%;
-  position:static;
-  display:inline;
-    margin:auto;
-}
-nav div ul li a{
-  position: static;
-  text-align: center;
-
-}
-*/
 #navbar, #navbar_sans_fond{
   position: fixed;
   width: 100%;
@@ -302,7 +277,6 @@ nav div ul li a{
 
 #navbar.default, #navbar_sans_fond.default{
   box-shadow: none;
-  /*padding-top: 10px;    barre au dessus du menu */
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
@@ -383,6 +357,7 @@ text-align:center;
 
 .menu nav {
   padding-left: 16vw;
+  padding-right: 10vw;
 }
 
 #navcolor .nav-wrapper {
@@ -400,7 +375,7 @@ text-align:center;
 /* Scroll btn */
 .menu .button-collapse {
   color: #ffd54f;
-  height:24px;
+  background: rgba(255,255,255,0.1);
 }
 
 /* SignUp and LogIn Buttons*/
@@ -477,6 +452,40 @@ text-align:center;
 
 #school-mobile .slider .slides {
     background-color: #00000000;
+}
+
+@media screen and (min-width: 500px){
+
+  #inscrire_etablissement{
+    float: right;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffb300 !important;
+  }
+}
+
+@media screen and (max-width: 500px) and (min-width: 360px){
+
+  #inscrire_etablissement{
+    display: block;
+    width: 290px;
+    margin: auto;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffb300 !important;
+  }
+}
+
+@media screen and (max-width: 360px){
+
+  #inscrire_etablissement{
+    display: block;
+    width: 225px;
+    margin: auto;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffb300 !important;
+  }
 }
 
 /* ------------------------- */
@@ -559,6 +568,10 @@ text-align:center;
   margin-bottom: 2.5rem;
 }
 
+.carte_liens{
+  height: 530px !important;
+}
+
 @media screen and (min-width: 331px) and (max-width: 600px){
 
   .logo_partenaire_container{
@@ -600,6 +613,12 @@ text-align:center;
 
 #copyright{
   padding: 0px;
+}
+
+a.hover-icone-footer:hover{
+
+    color: #ffe082 !important;
+
 }
 
 .droits{
@@ -680,6 +699,23 @@ h5 footer{
 
 
 /* ------------------------- */
+/* --- Recommandations ----- */
+/* ------------------------- */
+
+li.recommandation{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+/* ------------------------- */
+/* - Dates à ne pas manquer- */
+/* ------------------------- */
+
+p.dates{
+  margin-top:18px !important;
+  margin-bottom:0px !important;
+}
+
+/* ------------------------- */
 /* --- Classements --------- */
 /* ------------------------- */
 
@@ -705,4 +741,25 @@ h5 footer{
 
 .classement ul li{
   height:inherit;
+}
+
+/* ------------------------- */
+/* --- index numbers ------- */
+/* ------------------------- */
+
+#numbers ul{
+  margin:0 0 0 0;
+}
+#numbers ul li div{
+  width:100%;
+  background-size: cover;
+}
+#numbers-record{
+  background: url("img/numbers/record.png") no-repeat center;
+}
+#numbers-participant{
+  background: url("img/numbers/depart.png") no-repeat center;
+}
+#numbers-monde{
+  background: url("img/numbers/monde.png") no-repeat center;
 }

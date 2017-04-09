@@ -19,14 +19,19 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 <meta property="og:url" content="http://www.poucedor.fr" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/x-icon" href="assets/img/logo/poucedor_2017.png">
 
+
+	<!-- ################### Javascript ################### -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 	<!-- MaterializeCSS -->
 	<link type="text/css" rel="stylesheet" href="/assets/materialize-77935457972b3cab17146234cb3c5fcf220eaa40bdfef3b0c012a7b286e93bb0.css">
 
 	<!-- Material Icons -->
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- TimeCircles -->
 	<link type="text/css" rel="stylesheet" href="/assets/TimeCircles-b7cc55b7189eb1516b7780c34fddac77eb379b1649349f5a15c3a56b17764b51.css">
@@ -35,7 +40,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 	<link type="text/css" rel="stylesheet" href="/assets/login-30009898b2703739c50aa9790b2297cd372517fa2343f7943a755eb0c1d0e3c6.css">
 
 	<!-- global stylesheet -->
-	<link type="text/css" rel="stylesheet" href="/assets/index-fb79abde8358ceb77468396ae9b62904ad8a2cae3593b95fe34538abf32bd8a8.css">
+	<link type="text/css" rel="stylesheet" href="/assets/index-87a8110305393c917e7c24133c1893628180e1d1b5239817f1ac859476b204bf.css">
 
 	<!-- calendar -->
 	<link type="text/css" rel="stylesheet" href="/assets/calendar-a41d69c829024b661bceca74a1bb1a25f40c433f8f775e79ae2fdff14c7ebb73.css">
@@ -44,26 +49,10 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 	<div id="top" class="scrollspy"></div>
 
 	<div class="menu"><!--start menu-->
-<!--<div class="navbar-fixed hide-on-med-and-down">
-	<nav>
-		<div class="nav-wrapper" style="display:inline-block;">
-			<a href="index.html" style="position:static;padding-left:0;width:16vw;" class="brand-logo left">
-				<img src="/assets/img/logo/logo_2017_3-b3f26ecbc4e9bcf6b9166b567ef3f1222b06a7ce015904dea3da72824f769dd0.png" style="width:16vw;height:auto;" alt="logo">
-			</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down" style="padding-left:5%;">
-				<li><a href="association.html">L'association</a></li>
-				<li><a href="evenement.html">L'événement</a></li>
-				<li><a href="classements.html">Classements</a></li>
-				<li><a href="partenaires.html">Partenaires</a></li>
-				<li><a href="archives.html">Archives</a></li>
-			</ul>
-		</div>
-	</nav>
-</div>
--->
+
 <div id="navbar" class="nav-wrapper scrollspy default hide-on-med-and-down">
 
-	<a id="logo-container" href="index.html" class="brand-logo hide-on-med-and-down left"><img src="/assets/img/logo/logo_2017_3-b3f26ecbc4e9bcf6b9166b567ef3f1222b06a7ce015904dea3da72824f769dd0.png" width="100%" height="auto" alt="logo"></a>
+	<a id="logo-container" href="index.html" class="brand-logo hide-on-med-and-down left"><img src="/assets/img/logo/logo_2017.png" width="100%" height="auto" alt="logo"></a>
 
 	<nav class="transparent center" id="navcolor" role="navigation" style="line-height:4vw;height:4vw;">
 		<div class="nav-wrapper container">
@@ -76,7 +65,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 				</li>
 				<li> <a href="partenaires.html">Partenaires</a>
 				</li>
-				<li> <a href="archives.html">Archives</a>
+				<li> <a href="defis.html">Les Défis</a>
 				</li>
 			</ul>
 		</div>
@@ -88,7 +77,10 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 -->
 
 	</div>
-<a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only" style="position:fixed;z-index:10000;margin-top:1vw;margin-left:1vw;"><i class="material-icons">menu</i></a>
+
+	<a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only" style="position:fixed;z-index:10000;margin-top:0;margin-left:0;">
+		<i class="material-icons" style="margin:1vw;">&#xE5D2;</i>
+	</a>
 
 <div id="side-nav">
 	<ul id="nav-mobile" class="side-nav">
@@ -102,7 +94,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 		</li>
 		<li> <a href="partenaires.html">Partenaires</a>
 		</li>
-		<li> <a href="archives.html">Archives</a>
+		<li> <a href="defis.html">Les Défis</a>
 		</li>
 	</ul>
 </div>
@@ -176,81 +168,156 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 </div>
 
 <div class="container flow-text-adapt">
-	<div class="">
-		<h4 id="regles" class="center">Règles</h4>
+	<div class="section">
+<div class="row">
+		<h4 id="regles" class="center col s12">Règles de l'évenement</h4>
+</div>
 		<div class="row">
-			<h5 class="center">Règles du Pouce d'Or</h3>
-
+			<h5 class="col s12">Règles du Pouce d'Or</h5>
+		</div>
+		<div class="row">
+			<div class="col s12">
 			<p>
-				L'objectif !? Aller le plus loin possible, en 48h, en stop, et revenir, en binômes.
-				L'autostop est bien entendu compris au sens large, il est tout à fait acceptable (et valorisable !) d'être pris en stop dans un
-				train, une avionnette, un bateau, ou tout autre engin permettant de se déplacer plus rapidement (ou moins !) qu'à pied.
-				Les seuls transports payants autorisés sont les transports en commun dans les villes ainsi que les vélos en libre service.<br />
-				Les distances sont ensuite calculées via les données d'<a href="https://www.openstreetmap.org/directions#">OpenStreetMap</a> et l'algorithme OSRM.
-				100 km de pénalité sont retirés par heure de retard au retour.</p>
+				L'objectif !? Aller le plus loin possible, en 48h, en stop, et revenir, en binôme.
+			</p>
 
-			<p>Les plus intrépides pourront pimenter leur Pouce d'Or par l'accomplissement de <a href=""><strong>défis Pouce d'Or</strong></a>.
+				<p>L'autostop est bien entendu compris au sens large, il est tout à fait acceptable (et valorisable !) d'être pris en stop dans un
+				train, une avionnette, un bateau, ou tout autre engin permettant de se déplacer plus rapidement (ou moins !) qu'à pied.</p>
+				<p>
+					Les seuls transports payants autorisés sont les transports en commun dans les villes ainsi que les vélos en libre service.<br /></p>
+
+				<p> Les distances sont ensuite calculées via les données d'<a href="https://www.openstreetmap.org/directions#"><strong>OpenStreetMap</strong></a> et le projet OSRM.
+				<br/>100 km de pénalité sont retirés par heure de retard au retour.</p>
+
+			<p>Les plus intrépides pourront pimenter leur Pouce d'Or par l'accomplissement de <a href="defis.html"><strong>défis Pouce d'Or</strong></a>.
 				 Ces défis valoriseront notamment les moyens de transport alternatifs pris en stop, les aventures originales et autres exploits
 				 accomplis par les Pouceux ! Ils permettront de mettre en place un second classement, basé sur les points défis obtenus par
 				 chaque binôme.<br />
 				</p>
 
-			<h5 class="center">Consignes de sécurité</h3>
+				<br/>
+			</div>
+			<!-- <div class="col s4">
+				<img class="responsive-img" src="assets/img/evenement/planete_dessin.jpeg"></img>
+			</div> -->
+</div>
 
-			<p>Afin d'assurer la sécurité des participants, certaines consignes simples de sécurité devront être respectées tout au long
+			<div class="row">
+				<h5 class="col s12">Consignes de sécurité</h5>
+			</div>
+
+			<div class="row">
+			<p class="col s12">Afin d'assurer la sécurité des participants, certaines consignes simples de sécurité devront être respectées tout au long
 				du week-end:</p>
 
-			<ul>
-				<li>Porter le gilet jaune tout au long du week-end</li>
-				<li>Ne jamais se séparer de son binôme</li>
-				<li>Ne jamais s'endormir en même temps que son binôme, à moins d'être dans un environnement sécurisé</li>
-				<li>Mettre à jour sa position sur le site toutes les 3 heures, ou bien donner des nouvelles au staff</li>
-				<li>Eviter tout comportement irresponsable, du genre traverser la Loire ou une autoroute à la nage</li>
-				<li>Ne pas monter avec un conducteur qui n'inspire pas confiance</li>
-				<li>Contacter le staff si soucis ou besoin de soutien, logistique ou moral</li>
+			<ul class="col s11 offset-s1">
+				<li class="recommandation"><i class="fa fa-car yellow lighten-5 yellow-text text-darken-1" style="padding-right:0.5em"></i>  Porter le gilet jaune tout au long du week-end, parce que la sécurité c'est important.</li>
+				<li class="recommandation"><i class="fa fa-car yellow-text text-darken-1" style="padding-right:0.5em"></i>  Ne jamais se séparer de son binôme, même s'il ou elle est relou(e).</li>
+				<li class="recommandation"><i class="fa fa-car yellow-text text-darken-1" style="padding-right:0.5em"></i>  Ne jamais s'endormir en même temps que son binôme, à moins d'être dans un environnement sécurisé.</li>
+				<li class="recommandation"><i class="fa fa-car yellow-text text-darken-1" style="padding-right:0.5em"></i>  Communiquer sa position toutes les 3 heures, par saisie sur le site ou par échange avec le staff.</li>
+				<li class="recommandation"><i class="fa fa-car yellow-text text-darken-1" style="padding-right:0.5em"></i>  Eviter tout comportement irresponsable, du genre traverser la Loire ou une autoroute à la nage.</li>
+				<li class="recommandation"><i class="fa fa-car yellow-text text-darken-1" style="padding-right:0.5em"></i>  Ne pas monter avec un conducteur qui n'inspire pas confiance.</li>
+				<li class="recommandation"><i class="fa fa-car yellow-text text-darken-1" style="padding-right:0.5em"></i>  Contacter le staff si soucis ou besoin de soutien, logistique ou moral.</li>
 			</ul>
 		</div>
+
 	</div>
-	<div class="divider"></div>
-	<h4 id="recommendation" class="center">Recommandations</h4>
+</div>
+</div>
+	<div id="recommandations"><div class="container flow-text-adapt">
+  <div class="divider"></div>
+  <div class="row">
+    <h4 id="recommendation" class="center">Recommandations</h4>
+  </div>
+  <div class="row ">
+      <p class="col s12">
+        Un voyage en stop se prépare, spécialement si c’est un long trajet. Rien n'est à laisser au hasard : équipement, nourriture,
+        forme, et mental !!<br/></p>
 
-	<p>
-	  Un voyage en stop se prépare, spécialement si c’est un long trajet. Rien n'est à laisser au hasard : équipement, nourriture,
-		forme, et mental !!<br/>
-		Préparation du trajet<br/>
-		Ne pas partir avec un con !! Choisissez bien votre binôme pour passer le meilleur week-end possible !</p>
+        <h5><i class="fa fa-flag lighten-5 yellow-text text-darken-1" style="padding-right:0.5em"></i>Choix de ton binôme</h5>
 
 
-	<h4 id="etablissement" class="center">Inscrire son établissement</h4>
+      <p>Le premier point, c'est de <strong class="amber-text text-darken-1">bien choisir ton binôme</strong>.
+        Vous allez vivre une expérience certes unique, mais vous allez vivre en symbiose pendant 48h, alors n'allez pas vous taper dessus !
+      </p>
 
-	<p>Les inscriptions des établissements auront lieu pour l’édition 2017 du 1 au 20 septembre. </p>
+    </div>
 
-	<p>Tu veux nous rejoindre !? <br />
-	Quelques points essentiels seront à respecter, notamment au sujet:</p>
+      <div class="row valign-wrapper">
 
-	<ul>
-		<li>De la transmission des consignes de sécurité et de la prévention</li>
-		<li>De l’encadrement des binômes lors de l’événement</li>
-		<li>De la mise en commun du travail de communication</li>
-	</ul>
+    <div class="col s6">
+    <img class="responsive-img valign hide-on-small-only" src="assets/img/evenement/check_list.png"></img>
+  </div>
 
-	<p>N’hésite pas à nous contacter par <a href="mailto:staff@poucedor.fr">mail</a>, ou bien à contacter le profil Pouce d’Or
-		ou notre  <a href="https://www.facebook.com/poucedor/">page facebook</a>, nous te ferons parvenir toutes les informations nécessaires à la bonne organisation de l’événement !
-	</p>
+<div class="col m6 s12 valign">
 
-	<h4 id="dates" class="center">Dates à ne pas manquer</h4>
 
-	<p>Mercredi 21 septembre : Ouverture des inscriptions des participants.<br />
-	Vendredi 30 septembre 23h59 : Fermeture des inscriptions des participants. C’est le moment où il vaut mieux éviter de faire une soirée pré-départ.<br />
-	Samedi 1er octobre 7h20 : Rendez-vous au point de rencontre pour la distribution des gilets jaunes, la remise des décharges et les derniers points de sécurité. Grosse grosse grosse ambiance !<br />
-	Samedi 1er octobre 8h00 : C’est parti pour la première vague de Pouceux !<br />
-	Samedi 1er octobre 18h27 : D’après Roger, Prague c’est très joli de nuit, qu’est-ce que tu penses de ton aire d’autoroute pourrie ?<br />
-	Dimanche 2 octobre 13h09 : Vous croisez un binôme de Marseille. Sauf qu’eux ils sont à 764 km de chez eux.<br />
-	Lundi 3 septembre 8h00 : La plupart des Pouceux sont rentrés et vont mécaniquement en amphi. Y’en a deux qui sont encore bloqués à Strasbourg, ce sont des héros.<br />
-	Samedi 8 octobre 8h00 : La deuxième vague de Pouceux est en route !!<br />
-	Lundi 10 octobre 8h00 : Fin du Pouce d’Or 2016, tout le monde raconte ses anecdotes !! Vous avez jusqu’au 15 septembre pour valider vos parcours sur le site internet, y déclarer vos retards et y raconter votre aventure !</p>
 
-	<p>Jeudi 9 février 2017 : Ouaaaaais y’a le classement en ligne !!!</p>
+    <h5><i class="fa fa-flag yellow lighten-5 yellow-text text-darken-1" style="padding-right:0.5em"></i>Equipement et matériel</h5>
+    <p>
+      Très important, le <strong class="amber-text text-darken-1">chargeur de portable</strong>. <br/>
+      On a besoin de communiquer avec vous très régulièrement, alors si vous avez une batterie externe, un chargeur sur secteur ou sur cable USB, prenez !<br/>
+      En équipement, <strong class="amber-text text-darken-1">une lampe torche</strong> pour la nuit que vous allez passer, que ce soit à un QG, sur une aire, chez le chocho ou ailleurs ! <br/>
+      Mais surtout, pensez à prendre <strong class="amber-text text-darken-1">du matériel pour dormir</strong>, duvet, sac de couchage ! Les plus chanceux auront le bonheur de tester la nuit dans le parc ou sur une station service.
+    </p>
+      <p>
+      En terme de <strong class="amber-text text-darken-1">nourriture</strong>, vous avez le choix entre tout emporter ou vous ravitailler sur les aires d'autoroutes; ne vous surchargez pas, mais ayez des vivres !
+    </p>
+  </div>
+  </div>
+</div>
+</div>
+	<div id="inscrire_etablissement_garanti_anti_manu"><div class="container flow-text-adapt">
+  <div class="divider"></div>
+  <div class="row">
+    <h4 id="etablissement" class="center">Inscrire son établissement</h4>
+  </div>
+
+<div class="row valign-wrapper">
+  <div class="col s8 valign">
+  <p>Les inscriptions des établissements auront lieu pour l’édition 2017 du 1 au 20 septembre. </p>
+
+  <p>Tu veux nous rejoindre !? <br />
+  Quelques points essentiels seront à respecter, notamment au sujet:</p>
+
+  <ul>
+    <li class="recommandation"><i class="fa fa-check-square-o yellow lighten-5 yellow-text text-darken-1" style="padding-right:0.5em"></i>De la transmission des consignes de sécurité et de la prévention</li>
+    <li class="recommandation"><i class="fa fa-check-square-o yellow lighten-5 yellow-text text-darken-1" style="padding-right:0.5em"></i>De l’encadrement des binômes lors de l’événement</li>
+    <li class="recommandation"><i class="fa fa-check-square-o yellow lighten-5 yellow-text text-darken-1" style="padding-right:0.5em"></i>De la mise en commun du travail de communication</li>
+  </ul>
+
+  <p>N’hésite pas à nous contacter par <a href="mailto:staff@poucedor.fr">mail</a>, ou bien à contacter le profil Pouce d’Or
+  ou notre  <a href="https://www.facebook.com/poucedor/">page facebook</a>, nous te ferons parvenir toutes les informations nécessaires à la bonne organisation de l’événement !
+  </p>
+</div>
+<div class="col s4">
+  <img src="assets/img/evenement/i_want_you_2.png" class="responsive-img valign"></img>
+</div>
+
+</div>
+</div>
+</div>
+	<div id="dates"><div class="container flow-text-adapt">
+  <div class="divider"></div>
+  <div class="row">
+  	<h4 class="center">Dates à ne pas manquer</h4>
+</div>
+<div class="row">
+  <div class="col s12">
+  	<p class="dates"><strong class="amber-text text-darken-1">Mercredi 20 septembre : </strong>Ouverture des inscriptions des participants.</p>
+  	<p class="dates"><strong class="amber-text text-darken-1">Vendredi 29 septembre 23h59min59s : </strong>Fermeture des inscriptions des participants.
+      C’est le moment où il vaut mieux éviter de faire une soirée pré-départ.</p>
+  	<p class="dates"><strong class="amber-text text-darken-1">Samedi 30 septembre 7h20 : </strong>Rendez-vous au point de rencontre pour la distribution des gilets jaunes, la remise des décharges et les derniers points de sécurité. Grosse grosse grosse ambiance !</p>
+  	<p class="dates"><strong class="amber-text text-darken-1">Samedi 30 septembre 8h00 : </strong>C’est parti pour la première vague de Pouceux !</p>
+  	<p class="dates"><strong class="amber-text text-darken-1">Samedi 30 septembre 18h27 : </strong>Tu vois sur facebook que certains admirent l'architecture d'Amsterdam. Tu trouves ça très surfait parce que ton aire d'autoroute normande est beaucoup plus jolie ...</p>
+  	<p class="dates"><strong class="amber-text text-darken-1">Dimanche 1er octobre 13h09 : </strong>Vous croisez un binôme de Marseille. Sauf qu’eux ils sont à 764 km de chez eux. Vous leur demandez quels cours ils ratent demain.</p>
+  	<p class="dates"><strong class="amber-text text-darken-1">Lundi 2 octobre 8h00 : </strong>La plupart des Pouceux sont rentrés et vont mécaniquement en amphi. Il en reste deux qui sont encore bloqués à Strasbourg, ce sont des héros.</p>
+  	<p class="dates"><strong class="amber-text text-darken-1">Samedi 7 octobre 8h00 : </strong>La deuxième vague de Pouceux est en route !!</p>
+  	<p class="dates"><strong class="amber-text text-darken-1">Lundi 9 octobre 8h00 : </strong>Fin du Pouce d’Or 2016, tout le monde raconte ses anecdotes !! Vous avez jusqu’au 14 octobre pour valider vos parcours sur le site internet, y déclarer vos retards et y raconter votre aventure !</p>
+
+  	<p style="margin-top:20px"><strong class="amber-text text-darken-1">Jeudi 8 février 2017 : </strong>Ouaaaaais y’a le classement en ligne !!!</p>
+</div>
+</div>
 </div>
 </div>
 	<div class="section row" id="signup"><div id="modal1" class="modal modal-fixed-footer">
@@ -387,27 +454,55 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
   	<div class="container">
         <div class="row">
 
-          	<div class="col l6 m6 s6">
+          	<div class="col l6 m6 s12">
             	<h5 class="white-text">SUIVEZ NOUS</h5>
 
-              <a class="grey-text text-lighten-3" href="https://www.facebook.com/poucedor/">Page facebook</a>
-              <a class="grey-text text-lighten-3" href="https://twitter.com/pouce_dor">Twitter</a>
-              <a class="grey-text text-lighten-3" href="#">Diaspora*</a>
-
+              <div class="hide-on-med-and-up">
+                <div class="col s2"><a class="hover-icone-footer grey-text text-lighten-3 " href="https://www.facebook.com/poucedor/"><i class="fa fa-facebook hide-on-med-and-up" style="font-size:4em"></i></a></div>
+                <div class="col s2"><a class="hover-icone-footer grey-text text-lighten-3" href="https://twitter.com/pouce_dor"></i><i class="fa fa-twitter hide-on-med-and-up" style="font-size:4em"></i></a></div>
+              </div>
 
           	</div>
 
-          	<div class="col l6 m6 s6">
+          	<div class="col l6 m6 s12">
             	<h5 class="white-text">NOUS CONTACTER</h5>
 
-            <ul>
-              <p class="grey-text text-lighten-4 hide-on-small-only">Vous pouvez nous contacter par mail ou sur notre page Facebook. Nous essayerons de vous répondre au plus vite.</p>
-              <a class="grey-text text-lighten-3" href="mailto:staff@poucedor.fr">Contact mail</a>
-              <a class="grey-text text-lighten-3" href="https://www.facebook.com/poucedor/">Contact facebook</a>
-            </ul>
+              <div class="hide-on-med-and-up">
+                <a class="col s3 hover-icone-footer grey-text text-lighten-3" href="mailto:staff@poucedor.fr"><i class="fa fa-envelope" style="font-size:4em"></i></a>
+                <a class="col s3 hover-icone-footer grey-text text-lighten-3" href="https://www.facebook.com/poucedor/"><i class="fa fa-comment" style="font-size:4em"></i></a>
+                <p class="col m12 grey-text text-lighten-4 hide-on-small-only">Vous pouvez nous contacter par mail ou sur notre page Facebook.
+                  Nous essayerons de vous répondre au plus vite.
+                </p>
+              </div>
+
+
           	</div>
-            </div>
+
         </div>
+
+            <div class="row hide-on-small-only">
+              <!-- Le jour où on se servira de medium vraiment, il faudra activer ça -->
+              <!-- <div class="col m1 s3"><a class="hover-icone-footer grey-text text-lighten-3" href="#"><i class="fa fa-medium" style="font-size:6em"></i></a></div> -->
+
+            <div class="col l6 m6">
+              <div class="col l2 m3"><a class="hover-icone-footer grey-text text-lighten-3 " href="https://www.facebook.com/poucedor/"><i class="fa fa-facebook hide-on-small-only" style="font-size:6em"></i></a></div>
+              <div class="col l2 m3"><a class="hover-icone-footer grey-text text-lighten-3" href="https://twitter.com/pouce_dor"><i class="fa fa-twitter hide-on-small-only" style="font-size:6em"></i></a></div>
+            </div>
+
+              <div class="col l6 m6">
+                <a class="col l2 m3 hover-icone-footer grey-text text-lighten-3" href="mailto:staff@poucedor.fr"><i class="fa fa-envelope" style="font-size:4em"></i></a>
+                <a class="col l2 m3 hover-icone-footer grey-text text-lighten-3" href="https://www.facebook.com/poucedor/"><i class="fa fa-comment" style="font-size:4em"></i></a>
+                <p class="col l12 m12 grey-text text-lighten-4 hide-on-small-only">Vous pouvez nous contacter par mail ou sur notre page Facebook.
+                  Nous essayerons de vous répondre au plus vite.
+                </p>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
 
     <div id="copyright" class="footer-copyright">
       <div class="row container droits">
@@ -420,16 +515,14 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 
 
 	<!-- ################### Javascript ################### -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="/assets/materialize-82f1ccdb904761689a1ac2326c4ea4188e5ee8e403b75a38386553595294d0c0.js"></script>
-	<script type="text/javascript" src="/assets/index-4086e0b475e5d181db76ff1e2c5f96969f02c34fb04be7f732a7127529ba0d03.js"></script>
+	<script type="text/javascript" src="/assets/index-29c5437131d000a0081c75904487e327f330aec14b5e1a86f80bdbd238db126b.js"></script>
 	<script type="text/javascript" src="/assets/jquery.validate-548df2c1f0b237bcd37044a045fee70e89cf0e0da28cb4ea75299afc1e5dc50b.js"></script>
 	<script type="text/javascript" src="/assets/TimeCircles-141ba227b68e8ed5986e3edf658cad3968fc6aea53d621cba8d5e1a91bdd6ec4.js"></script>
 	<script type="text/javascript" src="/assets/countUp-4f566e8da674b93194440b9f9bd1858c5ff5171025ea944f858c1537b5f04a90.js"></script>
 	<script type="text/javascript" src="/assets/TimeCirclesInit-424498a5c122a25f81b92bb8e27cd71e6a9f0902a2ad2fbeff1c51f16a7795e0.js"></script>
 	<script type="text/javascript" src="/assets/login-aa20cc447719001520a1de19a6b3e989da622c90d179e21f716bfeda723c4136.js"></script>
-	<script type="text/javascript" src="/assets/citations_aleatoires-97153fb5d37552046b9dbd6f32a001395aeb07c140081a4f9c36bbcc42c599bd.js"></script>
+	<script type="text/javascript" src="/assets/citations_aleatoires-4cd6420c74c85fa76216a27394a9e21b25bf92777412836e2ce7036bdf3e7727.js"></script>
 	<script type="text/javascript" src="/assets/calendar-4b631de7d63186c092f10b66a9e55fb1a890ad6180b5c57847b84e3211916b2a.js"></script>
 
 </body>
