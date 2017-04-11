@@ -4,6 +4,7 @@
  ------Polices--
 ---------------*/
 
+
 @font-face {
     font-family: 'oswald';
     src: url(fonts/oswald/Oswald-Regular.ttf) format('ttf');
@@ -451,13 +452,10 @@ text-align:center;
     background-repeat: no-repeat;
 }
 
-#school-mobile .slider .slides {
+/*#school-mobile .slider .slides {
     background-color: #00000000;
-}
+}*/
 
-#school-mobile .slider {
-    background-color: #00000000;
-}
 /*@media screen and (min-width: 500px){
 
   #inscrire_etablissement{
