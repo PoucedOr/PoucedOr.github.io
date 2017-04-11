@@ -4,6 +4,7 @@
  ------Polices--
 ---------------*/
 
+
 @font-face {
     font-family: 'oswald';
     src: url(fonts/oswald/Oswald-Regular.ttf) format('ttf');
@@ -452,7 +453,7 @@ text-align:center;
 }
 
 #school-mobile .slider .slides {
-    background-color: #FCFCFC;
+    background-color: #00000000;
 }
 
 #school-mobile .slider img {
