@@ -2,6 +2,7 @@
 /*	Initialize Modals, Select fields, Parallax effect, Side navs
 /*-----------------------------------------------------------------------------------*/
 
+
 $(document).ready(function(){
 	$('#modal1').modal();
 	$('#modal_connexion').modal();
