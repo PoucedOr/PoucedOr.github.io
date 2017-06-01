@@ -205,7 +205,28 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 		</ul>
 	</div>
 	<div class="col s12 hide-on-med-and-up row">
-		<a class='dropdown-button btn' href='#' data-activates='dropdown1' id="button_mobile_dropdown">Classement 2016</a>
+		<select onChange="Onglets(this.value);return false;">
+			<optgroup label="Derniers classements">
+				<option value="2016">2016</option>
+				<option value="Defis">Défis</option>
+				<option value="Top25">Top 25</option>
+			</optgroup>
+			<optgroup label="Archives">
+				<option value="2015">2015</option>
+				<option value="2014">2014</option>
+				<option value="2013">2013</option>
+				<option value="2012">2012</option>
+				<option value="2011">2011</option>
+				<option value="2010">2010</option>
+				<option value="2009">2009</option>
+				<option value="2008">2008</option>
+				<option value="2006">2006</option>
+				<option value="2005">2005</option>
+				<option value="2004">2004</option>
+				<option value="2003">2003</option>
+			</optgroup>
+		</select>
+		<!-- <a class='dropdown-button btn' href='#' data-activates='dropdown1' id="button_mobile_dropdown">Classement 2016</a>
 		<ul id='dropdown1' class='dropdown-content'>
 			<li class="liensclassementtop"><a href="#" onclick="Onglets('2016');return false;">2016</a></li>
 			<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis');return false;">Défis</a></li>
@@ -223,7 +244,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 			<li class="liensclassementbot"><a href="#" onclick="Onglets('2005');return false;">2005</a></li>
 			<li class="liensclassementbot"><a href="#" onclick="Onglets('2004');return false;">2004</a></li>
 			<li class="liensclassementbot"><a href="#" onclick="Onglets('2003');return false;">2003</a></li>
-		</ul>
+		</ul> -->
 	</div>
 	<div class="col s12 m10">
 		<div class="classement" id="2016"><ul class="collapsible z-depth-2" data-collapsible=accordion>
