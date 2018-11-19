@@ -190,7 +190,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 <div class="row section" id="pageclassement">
 	<div class="col m2 striped z-depth-2 hide-on-small-only" id="liensclassement">
 		<ul>
-			<li class="liensclassementtop"><a href="#" onclick="Onglets('2017');return false;">Classement 2017</a></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('2018');return false;">Classement 2018</a></li>
 			<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis');return false;">Classement défis</a></li>
 			<li class="liensclassementtop"><a href="#" onclick="Onglets('Top25');return false;">Top 25</a></li>
 			<li class="hrclassement"><hr/></li>
@@ -213,7 +213,7 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 	<div class="col s12 hide-on-med-and-up row">
 		<select onChange="Onglets(this.value);return false;">
 			<optgroup label="Derniers classements">
-				<option value="2017">2017</option>
+				<option value="2018">2018</option>
 				<option value="Defis">Défis</option>
 				<option value="Top25">Top 25</option>
 			</optgroup>
@@ -235,25 +235,37 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 			</optgroup>
 		</select>
 	</div>
-	<div class="classement" id="2017a" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
-		<li>
-      			<div class='collapsible-header'>
-        			Pouce d'Or - Le test d'Or
-        			<div class='secondary-content hide-on-small-only'>
-          			42 km - Terre
-        			</div>
-      			</div>
-      			<div class='collapsible-body'>
-        			Arrivée à : <b>Dubrovnik, Croatie</b><br />
-        			Soit <b>42 km</b> depuis <b>Vogon, Luxembourg</b><br />
-        			L 'équipe a eu <b>666h</b> de retard.<br />
-        			L 'équipe totalise donc <b>9999999</b> points.
-      			</div>
-    		</li>
+	
+	<!-- Debut classement 2018 -->
+	
+	<div class="col s12 m10">
+		<div class="classement" id="2018"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+			
+     <li> 
+      <div class='collapsible-header'>
+        Pouce d'Or - Nom de test
+        <div class='secondary-content hide-on-small-only'>
+          distance km - Université de la Lune
+        </div>
+      </div>
+      <div class='collapsible-body'>
+        Arrivée à : <b>Mars</b><br />
+        Soit <b>15079999 km</b> depuis <b>Lune, Lune</b><br />
+        L 'équipe a eu <b>9 ans</b> de retard.<br />
+        L 'équipe totalise donc <b>-10</b> points.
+      </div>
+    </li>
+			
+		</div>
 	</div>
+	
+	<div class="col s12 m10">
+		<div class="classement" id="2017a" style="display:none;"><ul class="collapsible z-depth-2" data-collapsible=accordion>
+	<!-- Lignes à retablir en cas de pbm, retirer les 2 lignes au dessus	
 	<div class="col s12 m10">
 		<div class="classement" id="2017"><ul class="collapsible z-depth-2" data-collapsible=accordion>
-       <li>
+       -->
+     <li> 
       <div class='collapsible-header'>
         Pouce d'Or - Les Pouples d'Or
         <div class='secondary-content hide-on-small-only'>
