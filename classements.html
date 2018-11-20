@@ -191,9 +191,10 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 	<div class="col m2 striped z-depth-2 hide-on-small-only" id="liensclassement">
 		<ul>
 			<li class="liensclassementtop"><a href="#" onclick="Onglets('2018');return false;">Classement 2018</a></li>
-			<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis');return false;">Classement défis</a></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis 2018');return false;">Classement défis 2018</a></li>
 			<li class="liensclassementtop"><a href="#" onclick="Onglets('Top25');return false;">Top 25</a></li>
 			<li class="hrclassement"><hr/></li>
+			<li class="liensclassementtop"><a href="#" onclick="Onglets('Defis 2017');return false;">Classement défis 2017</a></li>
 			<li class="liensclassementtop"><a href="#" onclick="Onglets('2017');return false;">Classement 2017</a></li>
 			<li class="liensclassementtop"><a href="#" onclick="Onglets('2016');return false;">Classement 2016</a></li>
 			<li class="liensclassementbot"><a href="#" onclick="Onglets('2015');return false;">Classement 2015</a></li>
@@ -214,10 +215,11 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 		<select onChange="Onglets(this.value);return false;">
 			<optgroup label="Derniers classements">
 				<option value="2018">2018</option>
-				<option value="Defis">Défis</option>
+				<option value="Defis 2018">Défis</option>
 				<option value="Top25">Top 25</option>
 			</optgroup>
 			<optgroup label="Archives">
+				<option value="Defis 2017">2017</option>
 				<option value="2017">2017</option>
 				<option value="2016">2016</option>
 				<option value="2015">2015</option>
@@ -237,6 +239,14 @@ Le but : Aller le plus loin possible, en autostop, en 48 heures. Et revenir !"/>
 	</div>
 	
 	<!-- Debut classement 2018 -->
+	
+	<div class="col s12 m10">
+		<div class="classement" id="Defis 2018" style="display:none;><ul class="collapsible z-depth-2" data-collapsible=accordion>
+			
+			
+													      
+		</div>
+	</div>
 	
 	<div class="col s12 m10">
 		<div class="classement" id="2018"><ul class="collapsible z-depth-2" data-collapsible=accordion>
