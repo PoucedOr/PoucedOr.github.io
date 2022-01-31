@@ -21,15 +21,15 @@ Advices: (source: https://www.aerobatic.com/blog/jekyll-assets-bootstrap)
 ## Install
 
 * Check if you have all the requirements : https://jekyllrb.com/docs/installation/
-* Install Jekyll : 'gem install jekyll'
+* Install Jekyll : `gem install jekyll`
 * Copy paste the project
-* Execute 'gem install jekyll-assets uglifier jekyll-admin'
+* Execute `gem install jekyll-assets uglifier jekyll-admin`
 
 * Install Imagemagick http://imagemagick.org/script/index.php 
 	* Mac: 'brew install ImageMagick' if you have Homebrew
 	* Windows: Executable (.exe) in http://imagemagick.org/script/binary-releases.php#windows
 	* Unix: http://imagemagick.org/script/binary-releases.php#unix
-* Execute 'gem install mini_magic'
+* Execute `gem install mini_magick`
 
 # How to add a school in the school list
 
